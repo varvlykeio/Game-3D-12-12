@@ -71,6 +71,11 @@ namespace Gamemanagera{
         /// <summary>
         /// Function that is called when the script instance is being loaded.
         /// </summary>
+        /// 
+        public void CursorLockOnQuizEnd(){
+            events.CursorLock = true;
+        }
+
         private void Update()
         {
         if (events.QuizStart){
