@@ -71,21 +71,25 @@ namespace Gamemanagera{
         /// <summary>
         /// Function that is called when the script instance is being loaded.
         /// </summary>
-        private void Start()
+        private void Update()
         {
-        
-            if (k){
-            events.StartupHighscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
+        if (events.QuizStart){
 
-            timerDefaultColor = timerText.color;
-            LoadData();
 
-            timerStateParaHash = Animator.StringToHash("TimerState");
+                
+                events.StartupHighscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
 
-            var seed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
-            UnityEngine.Random.InitState(seed);
+                timerDefaultColor =  Color.white;
+                LoadData();
+                timerStateParaHash = Animator.StringToHash("TimerState");
 
-            Display(); 
+                var seed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
+                UnityEngine.Random.InitState(seed);
+                
+                Display();
+                 
+                events.QuizStart = false;
+                
             }
         }
 
