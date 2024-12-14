@@ -30,7 +30,7 @@ namespace Gamemanagera{
 
         private             IEnumerator         IE_WaitTillNextRound    = null;
         private             IEnumerator         IE_StartTimer           = null;
-        private             bool                k                       = false;
+
 
         private             bool                IsFinished
         {
